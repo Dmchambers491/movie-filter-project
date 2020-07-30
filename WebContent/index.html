@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Movie Filter</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4">Movie Filter</h1>
+				<p class="lead">Request a list of movies to pick from</p>
+			</div>
+		</div>
+
+		<form action="MovieFilterServlet" method="post" target="_blank">
+		<!-- Code for first part of movie filter project -->
+			<label for="ratings">Ratings: </label> 
+			<select name="ratings" id="ratings">
+				<option value="g">G</option>
+				<option value="pg">PG</option>
+				<option value="pg-13">PG-13</option>
+				<option value="nc-17">NC-17</option>
+				<option value="r">R</option>
+			</select> 
+			</br>
+			
+			<label for="rental">Rental Rates: </label> 
+			<select name="rental" id="rental">
+				<option value="0.99">0.99</option>
+				<option value="2.99">2.99</option>
+				<option value="4.99">4.99</option>
+			</select> 
+			</br></br>
+			
+			Result Size: <input type="number" id="movies" name="movies" min="1" max="20"></br></br>
+			
+			<input type="submit" value="Search" class="btn btn-primary">
+			<input type="reset" value="clear" class="btn btn-secondary">
+
+		</form>
+	</div>
+</body>
+</html>
